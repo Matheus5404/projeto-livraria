@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeLivraria } from './home-livraria/home-livraria';
 import { FooterLivraria } from './footer-livraria/footer-livraria';
 import { NavBarLivraria } from './nav-bar-livraria/nav-bar-livraria';
+import { ClienteLivraria } from './cliente-livraria/cliente-livraria';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { NavBarLivraria } from './nav-bar-livraria/nav-bar-livraria';
     LivrariaComponent,
     HomeLivraria,
     FooterLivraria,
-    NavBarLivraria
+    NavBarLivraria,
+    ClienteLivraria
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { NavBarLivraria } from './nav-bar-livraria/nav-bar-livraria';
     ReactiveFormsModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
