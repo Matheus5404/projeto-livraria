@@ -14,18 +14,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="inputDescription" class="form-label">Descrição</label>
-            <input formControlName="description" type="text" class="form-control" id="inputDescription">
-        </div>
-
-        <div class="mb-3">
             <label for="inputCategory" class="form-label">Categoria</label>
             <input formControlName="category" type="text" class="form-control" id="inputCategory">
-        </div>
-
-        <div class="mb-3">
-            <label for="inputPublisher" class="form-label">Editora</label>
-            <input formControlName="publisher" type="text" class="form-control" id="inputPublisher">
         </div>
 
         <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
@@ -35,28 +25,22 @@
     Total de livros: {{livrarias.length}}
     <br><br>
 
-    <!-- Cards em loop -->
-    <div class="row">
-        <div class="col-md-4 mb-4" *ngFor="let l of livrarias">
-            <div class="card shadow-lg border-0 h-100 rounded-4">
-                <img src="https://via.placeholder.com/300x150" class="card-img-top rounded-top-4" alt="{{l.name}}">
-
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title fw-bold text-primary text-center">{{l.name}}</h5>
-
-                    <p class="card-text text-muted text-center">
-                        <i class="bi bi-geo-alt-fill text-danger"></i> Preço: <strong>{{l.price}}</strong> <br>
-                        <i class="bi bi-globe-americas text-success"></i> Categoria: <strong>{{l.category}}</strong>
-                    </p>
-
-                    <div class="mt-auto text-center">
-                        <a href="#" class="btn btn-outline-primary w-100 rounded-pill">
-                            <i class="bi bi-info-circle"></i> Ver detalhes
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <table class="table table-spacing">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of livrarias">
+                <th scope="row">{{p.id}}</th>
+                <td>{{p.name}}</td>
+                <td>{{p.category}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

@@ -2,24 +2,21 @@
   "livros": [
     {
       "id": 1,
-      "titulo": "O Senhor dos Anéis",
-      "autor": "J.R.R. Tolkien",
-      "preco": 59.90,
-      "categoria": "Fantasia"
+      "name": "O Senhor dos Anéis",
+      "price": 59.90,
+      "category": "Fantasia"
     },
     {
       "id": 2,
-      "titulo": "1984",
-      "autor": "George Orwell",
-      "preco": 39.90,
-      "categoria": "Ficção Científica"
+      "name": "1984",
+      "price": 39.90,
+      "category": "Ficção Científica"
     },
     {
       "id": 3,
-      "titulo": "Dom Casmurro",
-      "autor": "Machado de Assis",
-      "preco": 29.90,
-      "categoria": "Clássico"
+      "name": "Dom Casmurro",
+      "price": 29.90,
+      "category": "Clássico"
     }
   ]
 }

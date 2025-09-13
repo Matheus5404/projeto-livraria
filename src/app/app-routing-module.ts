@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeLivraria } from './home-livraria/home-livraria';
 import { LivrariaComponent } from './livraria-component/livraria-component';
 import { ClienteLivraria } from './cliente-livraria/cliente-livraria';
-import { FooterLivraria } from './footer-livraria/footer-livraria';
-
 
 const routes: Routes = [
     { path: '', component: HomeLivraria },

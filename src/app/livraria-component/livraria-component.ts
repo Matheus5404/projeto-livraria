@@ -1,7 +1,7 @@
+import { Livraria } from './../livraria';
 import { Component, OnInit } from '@angular/core';
-import { Livraria } from './livraria';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ProductService } from '../product-service';
+import { LivrariaService } from './../livraria-service';
 
 @Component({
   selector: 'app-livraria-component',
@@ -14,15 +14,13 @@ export class LivrariaComponent implements OnInit {
   livrarias: Livraria[] = [];
   FormGrouplivraria: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private service: ProductService) {
+  constructor(private formBuilder: FormBuilder, private service: LivrariaService) {
 
     this.FormGrouplivraria = this.formBuilder.group({
       id: [''],
       name: [''],
       price: [''],
-      description: [''],
-      category: [''],
-      publisher: ['']
+      category: ['']
     });
   }
   ngOnInit(): void {
