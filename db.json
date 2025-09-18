@@ -3,20 +3,26 @@
     {
       "id": 1,
       "name": "O Senhor dos Anéis",
-      "price": 59.90,
+      "price": 59.9,
       "category": "Fantasia"
     },
     {
       "id": 2,
       "name": "1984",
-      "price": 39.90,
+      "price": 39.9,
       "category": "Ficção Científica"
     },
     {
       "id": 3,
       "name": "Dom Casmurro",
-      "price": 29.90,
+      "price": 29.9,
       "category": "Clássico"
+    },
+    {
+      "id": 4,
+      "name": "Hanna Montana",
+      "price": "140,00",
+      "category": "Fantasia Moderna"
     }
   ]
 }

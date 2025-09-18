@@ -1,7 +1,7 @@
-import { Livraria } from './../livraria';
 import { Component, OnInit } from '@angular/core';
+import { Livraria } from '../livraria';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { LivrariaService } from './../livraria-service';
+import { LivrariaService } from '../livraria-service';
 
 @Component({
   selector: 'app-livraria-component',
@@ -12,11 +12,11 @@ import { LivrariaService } from './../livraria-service';
 export class LivrariaComponent implements OnInit {
 
   livrarias: Livraria[] = [];
-  FormGrouplivraria: FormGroup;
+  FormGroupLivraria: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private service: LivrariaService) {
 
-    this.FormGrouplivraria = this.formBuilder.group({
+    this.FormGroupLivraria = formBuilder.group({
       id: [''],
       name: [''],
       price: [''],
@@ -24,7 +24,7 @@ export class LivrariaComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-      this.service.getAllProducts().subscribe(
+      this.service.getAllLivrarias().subscribe(
         {
           next: json => this.livrarias = json
         }
@@ -32,16 +32,16 @@ export class LivrariaComponent implements OnInit {
   }
     
   save() {
-    this.service.save(this.FormGrouplivraria.value).subscribe(
+    this.service.save(this.FormGroupLivraria.value).subscribe(
       {
         next: (json) => {
           this.livrarias.push(json);
-          this.FormGrouplivraria.reset();
+          this.FormGroupLivraria.reset();
         }
       }
     )
 
-    this.livrarias.push(this.FormGrouplivraria.value);
-    this.FormGrouplivraria.reset();
+    this.livrarias.push(this.FormGroupLivraria.value);
+    this.FormGroupLivraria.reset();
   }
 }

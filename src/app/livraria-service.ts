@@ -8,11 +8,11 @@ import { Livraria } from './livraria';
 })
 export class LivrariaService {
 
-  apiUrl = "http://localhost:3000/products";
+  apiUrl = "http://localhost:3000/livros";
 
   constructor(private http: HttpClient) { }
 
-  getAllProducts(): Observable<Livraria[]> {
+  getAllLivrarias(): Observable<Livraria[]> {
     return this.http.get<Livraria[]>(this.apiUrl);
   }
     save(livraria: Livraria): Observable<Livraria> {
